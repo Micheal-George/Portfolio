@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2a05cd7cd7.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI6GadXqbjZ3BpCOT-8IgoAIot3IL9qOPSKQ&usqp=CAU" type="image/icon type">
+
+    <title>MG</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+   #navbar{
+    margin-top: -50px;
+  padding-left:1.5%;
+  width: 100px;
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+   
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+   
+   }
+   #navbar  div{
+    height: 60px;
+    width: 60px;
+    background-color: #0f0f0f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 60%;
+   }
+  #navbar a{
+    color: white;
+    text-decoration: none;
+  }
+  #navbar i{
+    color: #7d8181;
+  }
+  #navbar div:hover{
+    background-color: rgb(11, 129, 11);
+    zoom: 1.05;
+  }
+  #navbar div:hover i{
+    color: white;
+  }
+  #navbar h1{
+    margin-top: 60px;
+    font-size: 40px;
+  }
+
+    #container{
+        background-image: url(https://www.pluralsight.com/content/dam/pluralsight2/homepage/2022/bkgd-triangle-right.png),url(	https://www.pluralsight.com/content/dam/pluralsight2/homepage/2022/bkgd-triangle-left.png);
+    height: 600px;
+    width: 100% ;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+    background-size: contain;
+    }
+   
+    #head{
+       margin-top: -10px;
+       height: 300px;
+       width: 550px;
+        margin-left: 13%;
+        padding: 10px,20px,0px ,0px;
+    }
+    #head>p{
+        
+        margin-left: 50px;
+        font-size: 50px;
+        color: white;
+        font-weight: 900;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    #resume{
+        margin-left: 16%;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        width: 140px;
+       transition: transform .5s ease;
+       border-bottom: 2px solid #ec008c;
+       padding-left: 5px;
+    }
+    #resume>a{
+      
+       font-weight: 600;
+        font-size: 18px;
+        /* background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28); */
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+    }
+    #resume:hover a{
+       transform: scale(1.2);
+        text-decoration-line: underline;
+        border-left: none;
+    }
+    #data{
+        height: auto;
+        width: 100%;
+        background-color:#040404  hsl(0,0%,2%)rgb(4,4,4);
+    }
+    #image{
+        height: 220px;
+        width: 220px;
+        margin: auto;
+        margin-left: 38%;
+        margin-top: -15%;
+    }
+    #image>img{
+        border-radius: 60%;  
+        height: 100%;
+        width: 100%;
+    }
+    #para>h5{
+        color:#7d8181;;
+        margin-top: 3%;
+        margin-left: 16%;
+       margin-right: 14%;
+        font-size: 24px;  
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #para>h5>span{
+      
+        background-image: linear-gradient(to left,#ec008c,#f05a28,#ec008c);;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 900; 
+  font-size: 26px;
+    }
+    #social-network{
+        height: auto;
+        margin-top: 10%;
+        margin-bottom: 6%;
+    }
+    #social-network>h1{
+        color: white;
+      
+        font-size: 40px;
+        font-size: 900;
+        margin-left: 16%;
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+    }
+    #project{
+        height: 650px;
+        width: 80%;
+        margin: auto;
+        margin-left: 16%;
+        display: flex;
+        justify-content:space-between;
+      margin-top: 3%;
+    }
+    #project>div{
+  background-color:#222222;
+  height: 100%;
+  width: 49%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 20px;
+    }
+    .mySlides ,.mySlides1{display:none;}
+    .fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+    #project>div>h1{
+        color: white;
+        text-align: center;
+        margin-top: 3%;
+    }
+    #project>div>p{
+        margin-top: 5%;
+        color: white;
+        font-family: sans-serif;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .stack{
+        height: 8%;
+        margin-left: 25%;
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        font-family: sans-serif;
+    }
+    .stack>div>p{
+        text-align: center;
+        color: white;
+        margin-top: 0px;
+    }
+    .btn{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 7%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+    .btn>button{
+       height: 30px;
+        width: 20%;
+        background-color: #040404;
+        border-radius:10px
+    }
+    .btn>button>a{
+        text-decoration: none;
+    }
+    .btn>button>a>i{
+        color: white;
+        font-size: 18px;
+    }
+    .btn>button>a>span{
+color: #7d8181;;
+margin-left: 5px;
+font-weight: 900;
+    }
+    .btn>button>a>span:hover{
+color: white;
+font-size: 16px;
+    }
+    #skills,#connect{
+        margin-left: 16%;
+        margin-top: 10%;
+        width: 80%;
+       
+    }
+    #skills>h1,#connect>h1{
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 40px;
+        font-size: 900;
+    }
+    #skills-int{
+        margin-top: 5%;
+        background-color:#222222;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        padding-right: 10%;
+        border-radius: 20px;
+    }
+    #skills-int>div{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+   margin-left: 2%;
+    }
+    #skills-int>div>div{
+        height: 130px;
+        width: 130px;
+    }
+    
+    #skills-int>div>div>img{
+        box-sizing: border-box;
+        height: 80%;
+        width: 100%;;
+        
+    }
+    #skills-int>div>div>p{
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        margin-top: 0px;
+    }
+    #connect
+    {
+        margin-left: 0px;
+    }
+
+#connect>div{
+    margin-top: 3%;
+    
+}
+#connect>div>div{
+    margin-top: 3%;
+}
+#connect>div span{
+    color:#b4d2d2;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 900;
+}
+#connect>div a{
+    text-decoration: none;
+}
+#connect>div i{
+    color: white;
+    font-size: 25px;
+}
+
+
+
+    #footerbot{
+    display: flex;
+    padding: 20px 0px;
+    justify-content: space-evenly;
+    border-top:1px solid #7d8181;
+}
+#footerbot p{
+    color:#7d8181;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+#footerbot i{
+    color:white;
+    font-size: 30px;
+    cursor: pointer;
+}
+#footerbot i:hover{
+    font-size: 35px;
+    cursor: pointer;
+}
+#footerbotpara>p{
+    color:white; 
+    font-weight: 700;
+}
+#socialId
+{
+    display: flex;gap: 30px;align-items: center;
+}
+
+
+@media screen and (max-width: 800px){
+    #navbar{
+    margin-top: -50px;
+  padding-left:1.5%;
+  width: 90px;
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+   
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+   
+   }
+   #navbar  div{
+    height: 60px;
+    width: 60px;
+    background-color: #0f0f0f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 80%;
+   }
+  #navbar a{
+    color: white;
+    text-decoration: none;
+  }
+  #navbar i{
+    color: #7d8181;
+  }
+  #navbar div:hover{
+    background-color: rgb(11, 129, 11);
+    zoom: 1.05;
+  }
+  #navbar div:hover i{
+    color: white;
+  }
+  #navbar h1{
+    margin-top: 60px;
+    font-size: 40px;
+  }
+
+    #container{
+        background-image: url(https://www.pluralsight.com/content/dam/pluralsight2/homepage/2022/bkgd-triangle-right.png),url(	https://www.pluralsight.com/content/dam/pluralsight2/homepage/2022/bkgd-triangle-left.png);
+    height: 600px;
+    width: 100% ;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+    background-size: contain;
+    }
+   
+    #head{
+       margin-top: -10px;
+       height: 300px;
+       width: auto;
+        margin-left: 13%;
+        padding: 10px,20px,0px ,0px;
+    }
+    #head>p{
+        
+        margin-left: 50px;
+        font-size: 40px;
+        color: white;
+        font-weight: 900;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    #resume{
+        margin-left: 20%;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        width: 140px;
+       transition: transform .5s ease;
+       border-bottom: 2px solid #ec008c;
+       padding-left: 5px;
+    }
+    #resume>a{
+      
+       font-weight: 600;
+        font-size: 18px;
+        /* background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28); */
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+    }
+    #resume:hover a{
+       transform: scale(1.2);
+        text-decoration-line: underline;
+        border-left: none;
+    }
+    #data{
+        height: auto;
+        width: 100%;
+        background-color:#040404  hsl(0,0%,2%)rgb(4,4,4);
+    }
+    #image{
+        height: 180px;
+        width: 180px;
+        margin: auto;
+        margin-left: 38%;
+        margin-top: -15%;
+    }
+    #image>img{
+        border-radius: 60%;  
+        height: 100%;
+        width: 100%;
+    }
+    #para>h5{
+        color:#7d8181;;
+        margin-top: 3%;
+        margin-left: 20%;
+       margin-right: 2%;
+        font-size: 20px;  
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #para>h5>span{
+      
+        background-image: linear-gradient(to left,#ec008c,#f05a28,#ec008c);;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 900; 
+  font-size: 24px;
+    }
+    #social-network{
+        height: auto;
+        margin-top: 10%;
+        margin-bottom: 6%;
+    }
+    #social-network>h1{
+        color: white;
+      
+        font-size: 40px;
+        font-size: 900;
+        margin-left: 20%;
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+    }
+    #project{
+        height: auto;
+        width: auto;
+        margin: auto;
+        margin-left: 20%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+      margin-top: 3%;
+    }
+    #project>div{
+  background-color:#222222;
+  height: auto;
+  width: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 20px;
+  padding-bottom: 15px;
+    }
+    .mySlides ,.mySlides1{display:none;}
+    .fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+    #project>div>h1{
+        color: white;
+        text-align: center;
+        margin-top: 3%;
+    }
+    #project>div>p{
+        margin-top: 3%;
+        color: white;
+        font-family: sans-serif;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .stack{
+        height: 8%;
+        margin-left: 25%;
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        font-family: sans-serif;
+    }
+    .stack>div>p{
+        text-align: center;
+        color: white;
+        margin-top: 0px;
+    }
+    .btn{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10%;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-bottom: 3%;
+    }
+    .btn>button{
+       height: 35px;
+        width: 27%;
+        background-color: #040404;
+        border-radius:10px
+    }
+    .btn>button>a{
+        text-decoration: none;
+    }
+    .btn>button>a>i{
+        color: white;
+        font-size: 120%;
+    }
+    .btn>button>a>span{
+color: #7d8181;;
+margin-left: 5px;
+font-weight: 900;
+    }
+    .btn>button>a>span:hover{
+color: white;
+font-size: 16px;
+    }
+    #skills,#connect{
+        margin-left: 20%;
+        margin-top: 16%;
+        width:auto;
+       
+    }
+   
+    #skills>h1,#connect>h1{
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 40px;
+        font-size: 900;
+    }
+    #skills-int{
+        margin-top: 5%;
+        background-color:#222222;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        padding-right: 5%;
+        border-radius: 20px;
+    }
+    #skills-int>div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+   margin-left: 13%;
+   justify-content: space-evenly;
+    }
+    #skills-int>div>div{
+        height: 80px;
+        width: 60px;
+      
+
+    }
+    #skills-int>div>div>img{
+        box-sizing: border-box;
+        height: 70%;
+        width: 100%;;
+        
+    }
+    #skills-int>div>div>p{
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        margin-top: 0px;
+        font-size: 80%;
+    }
+    #connect{
+        margin-left: 0px;
+    }
+
+
+#connect>div{
+    margin-top: 3%;
+}
+#connect>div>div{
+    margin-top: 3%;
+}
+#connect>div span{
+    color:#b4d2d2;
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: 900;
+}
+#connect>div a{
+    text-decoration: none;
+}
+#connect>div i{
+    color: white;
+    font-size: 18px;
+}
+
+
+
+    #footerbot{
+    display: flex;
+    padding: 20px 0px;
+    margin-left: 60px;
+    justify-content: space-evenly;
+    border-top:1px solid #7d8181;
+}
+#footerbot p{
+    color:#7d8181;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+#footerbot i{
+    color:white;
+    font-size: 15px;
+    cursor: pointer;
+}
+#footerbot i:hover{
+    font-size: 20px;
+    cursor: pointer;
+}
+#footerbotpara>p{
+    color:white; 
+    font-weight: 700;
+}
+}
+#socialId
+{
+    display: flex;gap: 20px;align-items: center;
+}
+
+
+
+@media screen and (max-width: 500px){
+    #navbar{
+    margin-top: -50px;
+  padding-left:10px;
+  width: 55px;
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+   
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+   
+   }
+   #navbar  div{
+    height: 40px;
+    width: 40px;
+    background-color: #0f0f0f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 80%;
+   }
+  #navbar a{
+    color: white;
+    text-decoration: none;
+  }
+  #navbar i{
+    color: #7d8181;
+  }
+  #navbar div:hover{
+    background-color: rgb(11, 129, 11);
+    zoom: 1.05;
+  }
+  #navbar div:hover i{
+    color: white;
+  }
+  #navbar h1{
+    margin-top: 60px;
+    font-size: 20px;
+    color: #7d8181;
+  }
+
+    #container{
+        background-image: url(https://www.pluralsight.com/content/dam/pluralsight2/homepage/2022/bkgd-triangle-right.png);
+    height: 600px;
+    width: auto;
+   
+   
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, left;
+    background-size: contain;
+    }
+   
+    #head{
+       margin-top: -10px;
+       height: 300px;
+       width: auto;
+        margin-left: 30px;
+        
+        padding: 10px,0px,0px ,0px;
+    }
+    #head>p{
+        margin-right: 0px;
+        margin-left: 70px;
+        font-size: 30px;
+        color: white;
+        font-weight: 900;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    #resume{
+        margin-left: 80px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        width: 90px;
+       transition: transform .5s ease;
+       border-bottom: 1px solid #ec008c;
+       padding-left: 5px;
+    }
+    #resume>a{
+      text-decoration: none;
+       font-weight: 600;
+      
+        font-size: 12px;
+        /* background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28); */
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+    }
+    #resume:hover a{
+       transform: scale(1.2);
+        
+        border-left: none;
+    }
+    #data{
+        height: auto;
+        margin: auto;
+        margin-top: -60%;
+        width: auto;
+        background-color:#040404  hsl(0,0%,2%)rgb(4,4,4);
+    }
+    #image{
+        height: 130px;
+        width: 130px;
+        margin-left: 40%;
+    }
+    #image>img{
+        border-radius: 60%;  
+        height: 100%;
+        width: 100%;
+    }
+    #para>h5{
+        color:#7d8181;;
+       
+       margin: auto;
+       margin-left: 80px;
+       margin-top: 3%;
+       margin-right: -20px;
+        font-size: 14px;  
+        font-family:Arial, Helvetica, sans-serif;
+        
+    }
+    #para>h5>span{
+      
+        background-image: linear-gradient(to left,#ec008c,#f05a28,#ec008c);;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 900; 
+  font-size: 18px;
+    }
+    #social-network{
+        height: auto;
+        margin-top: 10%;
+        margin-bottom: 6%;
+    }
+    #social-network>h1{
+        color: white;
+      
+        font-size: 30px;
+        font-size: 900;
+        margin-left: 80px;
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+    }
+    #project{
+        height: auto;
+        width: auto;
+        margin: auto;
+        margin-left:80px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+      margin-top: 3%;
+    }
+    #project>div{
+  background-color:#222222;
+  height: auto;
+  width: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 20px;
+  padding-bottom: 1px;
+    }
+    .mySlides ,.mySlides1{display:none;}
+    .fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+    #project>div>h1{
+        color: white;
+        text-align: center;
+        margin-top: 3%;
+        font-size: 20px;
+    }
+    #project>div>p{
+       margin-top: 3%;
+        color: white;
+        font-family: sans-serif;
+        font-size: 12px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: auto;
+    }
+
+    .stack{
+        height: 10px;
+        margin-left: 40%;
+        display: flex;
+        justify-content: space-around;
+        width: 18%;
+        font-family: sans-serif;
+    }
+    .stack>div>p{
+        font-size: 10px;
+        text-align: center;
+        color: white;
+        margin-top: 0px;
+    }
+    .btn{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 70px;
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-bottom: 5px;
+    }
+    .btn>button{
+       height: 25px;
+        width: 37%;
+        background-color: #040404;
+        border-radius:3px;
+        margin-bottom: 10px;
+    }
+    .btn>button>a{
+        text-decoration: none;
+    }
+    .btn>button>a>i{
+        color: white;
+        font-size: 80%;
+    }
+    .btn>button>a>span{
+color: #7d8181;;
+margin-left: 2px;
+font-weight: 800;
+font-size: 60%;
+    }
+    .btn>button>a>span:hover{
+color: white;
+font-size: 14px;
+    }
+    #skills{
+        margin-left: 80px;
+        margin-top: 16%;
+        width:auto;
+      
+    }
+    #skills>h1,#connect>h1{
+        background-image: linear-gradient(to left,#f05a28,#ec008c,#f05a28);; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 20px;
+        font-size: 900;
+    }
+    #skills-int{
+        margin-top: 5%;
+        background-color:#222222;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        padding-right: 5%;
+        border-radius: 20px;
+    }
+    #skills-int>div{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 10px;
+   justify-content: space-evenly;
+   margin-left: 15%;
+   height: 250px;
+    }
+    #skills-int>div>div{
+        height: 50px;
+        width: 40px;
+    }
+    #skills-int>div>div>img{
+        box-sizing: border-box;
+        height: 70%;
+        width: 100%;;
+        
+    }
+    #skills-int>div>div>p{
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        margin-top: 0px;
+        font-size: 10px;
+    }
+  
+
+#connect{
+    margin-left: 0px;
+        margin-top: 16%;
+        width: 210px; 
+}
+
+#connect>div{
+    margin-top: 3%;
+}
+#connect>div>div{
+    margin-top: 3%;
+}
+#connect>div span{
+    color:#b4d2d2;
+    font-size: 12px;
+    margin-left: 5x;
+    font-weight: 900;
+}
+#connect>div a{
+    text-decoration: none;
+}
+#connect>div i{
+    color: white;
+    font-size: 10px;
+}
+
+
+
+    #footerbot{
+    display: grid;
+    padding: 5px 0px;
+    grid-template-columns: repeat(1,1fr);
+    border-top:1px solid #7d8181;
+    width: auto;
+}
+#footerbot>div{
+    margin-left: 80px;
+}
+#footerbot>div:nth-child(2){
+    margin-left: 120px;
+   
+}
+#socialId
+{
+    display: flex;gap: 20px;align-items: center;
+}
+
+#footerbot p{
+    color:#7d8181;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+#footerbot i{
+    color:white;
+    font-size: 10px;
+    cursor: pointer;
+}
+#footerbot i:hover{
+    font-size: 12px;
+    cursor: pointer;
+}
+#footerbotpara>p{
+    color:white; 
+    font-weight: 700;
+}
+
+}
+</style>
+<body >
+   
+    <div id="container">
+        <div id="navbar">
+            <h1 style="color: white;">M<span style="color: red">G</span></h1>
+                <a href="#main"><div><i class="fa-solid fa-house"></i></div></a> 
+                <a href="#social-network"><div><i class="fa-solid fa-briefcase"></i></div></a> 
+                <a href="#skills"><div><h2>S</h2></div></a>
+                <a href="#connect"><div><i class="fa-solid fa-address-book"></i></div></a> 
+        </div>
+    <div id="main">
+        <div id="head">
+            <p>Turning ideas into real life products is my calling</p>
+        </div>
+        <div id="resume"><a href="/resume.pdf" download ><p id="view"> VIEW RESUME </p> </a></div>
+    </div>
+</div>
+
+<div id="data">
+  <div id="image">
+    <img src="/1.jpg" alt="profile-pic">
+  </div>
+  <div id="para">
+    <h5>
+        Hello ! 👋, my name is <span>Micheal George</span> and I am a <span>Java Backend Developer</span>, passionate  about building digital products that improve everyday experience for people.
+    </h5>
+    <h5>
+        I love to work on exciting projects that test what I've learnt, whilst being exposed to the power and potential of the ever-evolving technologies around us. I'm always looking for better, and more importantly, ethical and accessible ways to solve the common problems we are faced with day-to-day.
+    </h5>
+  </div>
+  </div>
+  <div id="social-network">
+    <h1>Projects </h1>
+   <div id="project">
+          <div>
+            <h1>Kalyan Jewellers Clone</h1>
+            <div class="w3-content w3-section" >
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*u1z3TvwE6YVTSDkahyAtbg.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*hfva6o_ctZbOCD0Q_XDgtw.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*mOaGy65L5pJ-gN5Wcmi5Qg.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*MgDJ3jIDnpo04rlwVauf1g.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*aAfzZpHOafI-W7g7fg_0dw.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*ttTiW7XXur9T-RLaIhJiSQ.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*EJLwbW3rzl_cVbAD31NNMg.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/2400/1*7hYegjmq9vrUjxb3Fut1JA.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*ofdCaBRcuO5Ir0N7oeX2tA.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*c6wsEL-LPseTBeVOX2VOFA.png" style="width:100%">
+                <img class="mySlides fade" src="https://miro.medium.com/max/875/1*vqmMEDbe9C83WJYERjxFNA.png" style="width:100%">
+              </div>
+              <p>Kalyan Jewellers is an Indian chain of jewelry showrooms, which provides a wide variety of Jewellers. They also provide shopping facilities through the online site and offline stores</p>
+             <div class="stack">
+                <div><img src="	https://chiranjeev-thapliyal.vercel.app/svg/html-5.svg" alt=""><p>HTML</p></div>
+                <div>  <img src="	https://chiranjeev-thapliyal.vercel.app/svg/css3.svg" alt=""><p>CSS</p></div>
+                <div><img src="	https://chiranjeev-thapliyal.vercel.app/svg/javascript.svg" alt=""><p>JS</p></div>
+             </div>
+             <div class="btn">
+                        <button><a href="https://github.com/DeepanshuChugh/KalyanJewellers" target="_blank"><i class="fa-brands fa-github"></i><span>CODE</span></a></button>
+                        <button><a href="https://stellular-scone-3e11dc.netlify.app/" target="_blank"><i class="fa-brands fa-neos"></i><span>LIVE</span></a>
+                        </button>
+                        <button><a href="https://medium.com/@michealgeorge432/group-project-kalyan-jewellers-site-clone-5d88cd05099c" target="_blank"><i class="fa-brands fa-medium"></i><span>BLOG</span></a></button>
+             </div>
+            </div>
+          <div>
+            <h1>PluralSight Clone</h1>
+            <div class="w3-content w3-section" >
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*EYu0Fip3JdLc3plOB5owMA.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*YrDZoCTzYh16iD61A5_zMw.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*xUg1IpooKrL7EcXjTZ_s0g.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*96zSoOTmnbkVpHsX6OrmOA.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*ZF5aTxXGdjfFN1qZH1e9Wg.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*3L3sW--hlO6n7MoAS2BFDw.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*7oUEFvN6xPWpQHQLDrH8Cw.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*I9USX_OOil1RuM5lZWS_Ww.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*xpSq3RhaEiTQXxxWRkHJ-Q.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*MBwZIakiAHpp52YmZSUhqA.png" style="width:100%">
+                <img class="mySlides1 fade" src="https://miro.medium.com/max/875/1*aX8XqeDI3Oe79mgcGqpOWw.png" style="width:100%">
+              </div>
+              <p>Pluralsight, Inc. is an American privately held online education company that offers a variety of video training courses for software developers, IT administrators, and creative professionals through its website.</p>
+              <div class="stack">
+                <div><img src="	https://chiranjeev-thapliyal.vercel.app/svg/html-5.svg" alt=""><p>HTML</p></div>
+                <div>  <img src="https://chiranjeev-thapliyal.vercel.app/svg/css3.svg" alt=""><p>CSS</p></div>
+                <div><img src="	https://chiranjeev-thapliyal.vercel.app/svg/javascript.svg" alt=""><p>JS</p></div>
+             </div>
+             <div class="btn ,btnp">
+                <button><a href="https://github.com/Micheal-George/PluralSight.Site" target="_blank"><i class="fa-brands fa-github"></i><span>CODE</span></a></button>
+                <button><a href="https://dulcet-brigadeiros-75a972.netlify.app/" target="_blank"><i class="fa-brands fa-neos"></i><span>LIVE</span></a>
+                </button>
+                <button><a href="https://medium.com/@michealgeorge432/group-project-pluralsight-site-clone-2bc256b318bf" target="_blank"><i class="fa-brands fa-medium"></i><span>BLOG</span></a></button>
+     </div>
+          </div>
+   </div>
+   <div id="skills">
+        <h1>Skills & Interests</h1>
+        <div id="skills-int">
+            <div>
+                <div><img src="	https://chiranjeev-thapliyal.vercel.app/svg/html-5.svg" alt=""><p>HTML</p></div>
+                <div><img src="https://chiranjeev-thapliyal.vercel.app/svg/css3.svg" alt=""><p>CSS</p></div>
+                <div><img src="	https://chiranjeev-thapliyal.vercel.app/svg/javascript.svg" alt=""><p>JS</p></div>
+                <div><img src="https://chiranjeev-thapliyal.vercel.app/svg/mysql-logo.svg" alt=""><p>MYSQL</p></div>
+          
+
+       
+        <div><img src="https://chiranjeev-thapliyal.vercel.app/svg/git.svg" alt=""><p>GITHUB</p></div>
+        <div id="chan"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ba51a290-99ed-4672-b50c-443dfa3eccab/d61mi0t-fde23788-43c3-4acf-a0d4-dee822cdedbe.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JhNTFhMjkwLTk5ZWQtNDY3Mi1iNTBjLTQ0M2RmYTNlY2NhYlwvZDYxbWkwdC1mZGUyMzc4OC00M2MzLTRhY2YtYTBkNC1kZWU4MjJjZGVkYmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Qvi0kv_NiQB99SJdwWFtJBPl9tfw_3mh21AGgmhy3IQ" alt=""><p>JAVA</p></div>
+
+        <div id="chang" ><img src="data:image/jpeg;base64,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" alt=""><p>SPRING</p></div>
+        <div id="change" ><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIHM6XUyIcpYtrn11jg6N_esJoMAN05yC-A&usqp=CAU" alt=""><p>DS & ALGO</p></div>   
+    
+                <div><img src="https://chiranjeev-thapliyal.vercel.app/svg/amazon-web-services.svg" alt=""><p>AWS</p></div>
+           
+        </div>
+   </div>
+   <div id="connect">
+      <h1>Let's connect:</h1>
+     <div>
+        <div><a href="mailto:michealgeorge432@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i><span>michealgeorge432@gmail.com</span></a> </div>
+        <div><a href="https://github.com/Micheal-George" target="_blank"><i class="fa-brands fa-github"></i><span>github.com/Micheal-George</span></a></div>
+        <div> <a href="https://www.linkedin.com/in/micheal-george-3b2b9122b/" target="_blank"> <i class="fa-brands fa-linkedin-in"></i><span>linkedin.com/in/micheal-george-3b2b9122b/</span></a></div>
+        <div><a href="https://medium.com/@michealgeorge432" target="_blank"><i class="fa-brands fa-medium"></i><span>medium.com/@michealgeorge432</span></a></div>
+        <div></div>
+     </div>
+   </div>
+</div>
+<div id="footerbot">
+    <div>
+        <p>© 2022 Designed and Built by Micheal George with ❤️</p>
+    </div>
+        <div id="socialId">
+           <a href="https://www.facebook.com/micheal.george.7" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="">  <i class="fa-brands fa-instagram" target="_blank"></i></i></a>
+            <a href="https://github.com/Micheal-George" target="_blank"><i class="fa-brands fa-github"></i></a>
+           <a href="https://www.linkedin.com/in/micheal-george-3b2b9122b/" target="_blank"> <i class="fa-brands fa-linkedin-in"></i></a>
+    
+    </div>
+</div>`
+</body>
+</html>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+
+//--------------------------------------------------------------
+
+let slideIndex1 = 0;
+showSlides1();
+
+function showSlides1() {
+  let i;
+  let slides1 = document.getElementsByClassName("mySlides1");
+  for (i = 0; i < slides1.length; i++) {
+    slides1[i].style.display = "none";
+  }
+  slideIndex1++;
+  if (slideIndex1 > slides1.length) {slideIndex1 = 1}
+  slides1[slideIndex1-1].style.display = "block";
+  setTimeout(showSlides1, 3000); // Change image every 2 seconds
+}
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
